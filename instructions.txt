@@ -1,0 +1,44 @@
+How to use Shell (patriotsh>)
+
+To run shell with our tester file (input.txt)
+1. Make --> creates "test" executable in src directory 
+2. "tests/output.txt" is created within the Makefile 
+3. All test cases are in "tests/input.txt" file 
+4. Compares "tests/output.txt" with "tests/expectedOut.txt"
+All correct if terminal says: 
+"Files tests/output.txt and tests/expectedOutput.txt are identical" 
+
+Commands available: 
+
+CD
+- cd .. 
+- cd . 
+- cd <directoryPath> 
+
+LS 
+
+- ls 
+
+MKDIR 
+
+- mkdir <directoryName> 
+
+RMDIR 
+
+- rmdir <directoryName> 
+
+PWD 
+
+- pwd
+
+CP 
+
+- cp <sourceFile> <destinationFile> 
+
+EXIT 
+
+- exit 
+
+EXECUTE 
+
+- exec ./<executable> 

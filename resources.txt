@@ -1,0 +1,12 @@
+research
+https://www.geeksforgeeks.org/making-linux-shell-c/
+https://www.geeksforgeeks.org/create-directoryfolder-cc-program/#:~:text=The%20mkdir()%20function%20creates,empty%20directory%20with%20name%20filename.&text=Note%3A%20A%20return%20value%20of,%2C%20and%20%2D1%20indicates%20failure
+https://www.geeksforgeeks.org/cp-command-linux-examples/
+https://www.geeksforgeeks.org/essential-linuxunix-commands/
+
+source codes
+https://github.com/coreutils/coreutils/blob/master/src/cp.c
+https://github.com/wertarbyte/coreutils/blob/master/src/ls.c
+http://git.savannah.gnu.org/cgit/coreutils.git/tree/src/mkdir.c
+http://git.savannah.gnu.org/cgit/coreutils.git/tree/src/rmdir.c
+http://git.savannah.gnu.org/cgit/coreutils.git/tree/src/pwd.c

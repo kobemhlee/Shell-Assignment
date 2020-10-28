@@ -1,0 +1,52 @@
+patriotsh> cd tests/testFiles
+
+Directory changed successfully
+
+patriotsh> ls 
+. 
+.. 
+file1 
+file2 
+file3 
+file4 
+drawing.txt 
+patriotsh> cd
+
+Invalid cd call.
+
+patriotsh> cd file5
+
+Invalid directory
+
+patriotsh> mkdir file5
+patriotsh> ls
+. 
+.. 
+file1 
+file2 
+file3 
+file4 
+drawing.txt 
+file5 
+patriotsh> rmdir file5
+patriotsh> ls
+. 
+.. 
+file1 
+file2 
+file3 
+file4 
+drawing.txt 
+patriotsh> cp drawing.txt newDrawing.txt 
+patriotsh> ls 
+. 
+.. 
+file1 
+file2 
+file3 
+file4 
+drawing.txt 
+newDrawing.txt 
+patriotsh> pwd
+/home/runner/cs4310a4/tests/testFiles
+patriotsh> exit

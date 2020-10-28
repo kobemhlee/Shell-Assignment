@@ -1,0 +1,12 @@
+cd tests/testFiles
+ls 
+cd
+cd file5
+mkdir file5
+ls
+rmdir file5
+ls
+cp drawing.txt newDrawing.txt 
+ls 
+pwd
+exit

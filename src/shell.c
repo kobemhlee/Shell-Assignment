@@ -34,10 +34,12 @@ Should be able to run executables
 #include "ls.h"
 #include "pwd.h"
 #include "cp.h"
+#include "execute.h"
+#include "cd.h"
 
 int mkdir(const char *pathname, mode_t mode);
+int rmdir(const char *pathname, mode_t mode);
 char **get_input(char *);
-int cd(char *);  
 
 
 int main(void){
@@ -61,10 +63,14 @@ int main(void){
     }
 		//change directory command is called
     if(strcmp(command[0], "cd") == 0){
-      if(cd(command[1]) < 0){
-        perror(command[1]); 
+      if (command[1]==NULL){
+        printf("\nInvalid cd call.\n\n");
+        continue;
       }
-      continue; 
+			
+      char *p[2] = {"cd", command[1]}; 
+      cd(2,p); 
+      //continue; 
     }
 		//present working directory path
 		else if(strcmp(command[0], "pwd") == 0){
@@ -77,7 +83,7 @@ int main(void){
     }
 		//remove directory command is called
     else if(strcmp(command[0], "rmdir") == 0){
-      rmdir(command[1]);
+      rmdir(command[1], 0777);
     }
 		//list contents of present working directory called
     else if(strcmp(command[0], "ls") == 0){
@@ -93,6 +99,10 @@ int main(void){
     else if(strcmp(command[0], "exit") == 0){
       exit(0); 
     }
+		else if(strcmp(command[0], "exec") == 0){
+			char *p[2] = {command[0], command[1]}; 
+			execute(2, p); 
+		}
 		//for any input that is not a correct built in command
 		else
 			printf("Command does not exist");
@@ -136,6 +146,3 @@ char **get_input(char *input){
   return command; 
 }
 
-int cd(char *path){
-  return chdir(path);
-}
